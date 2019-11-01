@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
 import { withRouter } from "react-router-dom"
-import useSimpleAuth from "../../hooks/ui/useSimpleAuth"
+import useSimpleAuth from "../hooks/ui/useSimpleAuth"
 import "./Login.css"
 
 
@@ -10,7 +10,7 @@ const Register = props => {
     const lastName = useRef()
     const password = useRef()
     const firstName = useRef()
-    const address = useRef()
+    const title = useRef()
     const phoneNumber = useRef()
     const verifyPassword = useRef()
     const { register } = useSimpleAuth()
@@ -22,7 +22,7 @@ const Register = props => {
             "username": userName.current.value,
             "first_name": firstName.current.value,
             "last_name": lastName.current.value,
-            "address": address.current.value,
+            "title": title.current.value,
             "phone_number": phoneNumber.current.value,
             "email": email.current.value,
             "password": password.current.value
@@ -38,7 +38,7 @@ const Register = props => {
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Register to use Bangazon</h1>
+                <h1 className="h3 mb-3 font-weight-normal">Register to use Wheres My Spares</h1>
                 <fieldset>
                     <label htmlFor="userName"> Username </label>
                     <input ref={userName} type="text"
@@ -72,9 +72,9 @@ const Register = props => {
                         required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="inputAddress"> Address </label>
-                    <input ref={address} type="text"
-                        name="address"
+                    <label htmlFor="inputTitle"> Title </label>
+                    <input ref={title} type="text"
+                        name="title"
                         className="form-control"
                         required />
                 </fieldset>
