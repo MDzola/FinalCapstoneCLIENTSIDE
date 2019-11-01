@@ -22,7 +22,7 @@ const HomePage = props => {
   return (
     <>
       <main className="explorer">
-        <h1>Welcome to Wheres My Spares</h1>
+        <h1>Welcome to Where's My Spares</h1>
         <h4><SpareItemList {...props} spareitems={spareitems} /></h4>
       </main>
     </>

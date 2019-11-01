@@ -28,8 +28,8 @@ const RequisitionOrder = props => {
   });
 }
 
-  const deleteItem = productItem => {
-    fetch(`http://localhost:8000/orders/cart`, {
+  const deleteItem = spareItem => {
+    fetch(`http://localhost:8000/requisitionorders/cart`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const RequisitionOrder = props => {
         Authorization: `Token ${localStorage.getItem("wheresmyspares_token")}`
       },
       body: JSON.stringify({
-        "product_id": productItem
+        "spareItem_id": spareItem
       })
     }).then(() => {
       getOpenOrder()
@@ -45,10 +45,6 @@ const RequisitionOrder = props => {
   };
 
   const completeOrder = () => {
-    if(payment.current.value === ""){
-      alert("Please Select a Payment Type Fool!")
-    }
-    else{
     fetch(`http://localhost:8000/requisitionorders/cart`, {
       method: "PUT",
       headers: {
@@ -63,7 +59,7 @@ const RequisitionOrder = props => {
     .then(() => {
       props.history.push("/")
     })
-  }};
+  };
 
   const cancelOrder = () => {
     console.log("delete works")
