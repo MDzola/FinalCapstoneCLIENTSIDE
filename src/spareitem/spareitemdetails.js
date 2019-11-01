@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useSimpleAuth from "../hooks/ui/useSimpleAuth"
+import { Link } from "react-router-dom"
 
 const SpareItemDetails = props => {
     const { isAuthenticated } = useSimpleAuth()
@@ -52,6 +53,9 @@ const SpareItemDetails = props => {
                                 onClick={() => addToOrder(spareItemDetail)}> Add to Requisition </button>
                                 : null
                             }
+                            <Link className="nav-link" to={`./${spareItemDetail.id}/edit`}>
+                                     <h5>Adjust Spare Item Quantity</h5>
+                            </Link>
                             </div>
                             </>
             </section>

@@ -1,6 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
-import NavBar from "./nav/NavBar"
+import NavBar from "./nav/navbar"
 import ApplicationViews from "./ApplicationViews"
 
 const WheresMySparesProject = () => {
