@@ -8,6 +8,7 @@ import NewCategoryForm from "./category/categoryform"
 import SpareItemForm from "./spareitem/spareitemform"
 import SpareItemDetails from "./spareitem/spareitemdetails"
 import RequisitionOrder from "./order/requisitionorder"
+import SpareItemEditForm from "./spareitem/spareitemeditform"
 
 
 const ApplicationViews = () => {
@@ -36,6 +37,11 @@ const ApplicationViews = () => {
 
             <Route exact path="/spareitems/:spareitemId(\d+)" render={(props) => {
                 return <SpareItemDetails {...props} />
+            }}
+            />
+
+            <Route exact path="/spareitems/:spareitemId(\d+)/edit" render={(props) => {
+                return <SpareItemEditForm {...props} />
             }}
             />
 

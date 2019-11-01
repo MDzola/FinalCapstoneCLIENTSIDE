@@ -53,7 +53,7 @@ const RequisitionOrder = props => {
         Authorization: `Token ${localStorage.getItem("wheresmyspares_token")}`
       },
       body: JSON.stringify({
-        "payment_id": payment.current.value
+        "is_complete": ""
       })
     })
     .then(() => {
