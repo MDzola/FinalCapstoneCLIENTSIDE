@@ -13,16 +13,13 @@ const NavBar = props => {
                 <Link className="nav-link" to="/">Wheres My Spares</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to="/productform">Create New SpareItem</Link>
-            </li>
-            <li className="nav-item">
-                <Link className="nav-link" to="/itemcategoryform">Create New Item Category</Link>
-            </li>
-            <li className="nav-item">
                 <Link className="nav-link" to="/">Search for Spare Part</Link>
             </li>
             <li className="nav-item">
                 <Link className="nav-link" to="/requisitionorder">Requisition Order</Link>
+            </li>
+            <li className="nav-item">
+                <Link className="nav-link" to="/inventorymanagement">Inventory Management</Link>
             </li>
 
 

@@ -9,6 +9,8 @@ import SpareItemForm from "./spareitem/spareitemform"
 import SpareItemDetails from "./spareitem/spareitemdetails"
 import RequisitionOrder from "./order/requisitionorder"
 import SpareItemEditForm from "./spareitem/spareitemeditform"
+import InventoryManagement from "./inventorymanagement/inventorymanagement"
+import SpareItemCategoryDetails from "./category/spareitemcategorydetails"
 
 
 const ApplicationViews = () => {
@@ -46,7 +48,7 @@ const ApplicationViews = () => {
             />
 
             <Route
-                path="/productform" render={props => {
+                path="/spareitemform" render={props => {
                     return <SpareItemForm {...props} />
                 }}
             />
@@ -57,10 +59,23 @@ const ApplicationViews = () => {
                 }}
             />
 
+                <Route
+                path="/spareitemcategory/:spareitemcategoryId(\d+)" render={props => {
+                    return <SpareItemCategoryDetails {...props} />
+                }}
+            />
+
+
             <Route exact path="/requisitionorder" render={props => {
                 return <RequisitionOrder {...props} />
             }}
             />
+
+            <Route exact path="/inventorymanagement" render={props => {
+                return <InventoryManagement {...props} />
+            }}
+            />
+
 
 
 
