@@ -44,18 +44,26 @@ const SpareItemDetails = props => {
         <>
             <section className="SpareItemDetails">
                             <>
-                            <div  key={spareItemDetail.id}>
-                            <h3>Name of Product: {spareItemDetail.name}</h3>
-                            <h3>Product Description: {spareItemDetail.description}</h3>
-                            <h3>Quantity Available: {spareItemDetail.quantity} </h3>
+                            <div className="card text-center" style={{width: '35em'}}>
+                            <div className="card-body">
+                            <div key={spareItemDetail.id}>
+                            <h3 className="card-title">{spareItemDetail.name}</h3>
+                            <h5 className="card-text">Product Description: {spareItemDetail.description}</h5>
+                            <li className="card-text">Quantity Available: {spareItemDetail.quantity} </li>
+                            {/* <li className="card-text">Category: {spareItemDetail.category} </li> */}
+                            </div>
+                            <br></br>
                             {isAuthenticated() ?
-                            <button className="fakeLink addToOrder__link"
-                                onClick={() => addToOrder(spareItemDetail)}> Add to Requisition </button>
+                            <button className="btn btn-primary"
+                                onClick={() => addToOrder(spareItemDetail)}> Add to Requisition Order </button>
                                 : null
                             }
+                             <br></br>
+                             <br></br>
                             <Link className="nav-link" to={`./${spareItemDetail.id}/edit`}>
                                      <h5>Adjust Spare Item Quantity</h5>
                             </Link>
+                            </div>
                             </div>
                             </>
             </section>
