@@ -11,6 +11,8 @@ import RequisitionOrder from "./order/requisitionorder"
 import SpareItemEditForm from "./spareitem/spareitemeditform"
 import InventoryManagement from "./inventorymanagement/inventorymanagement"
 import SpareItemCategoryDetails from "./category/spareitemcategorydetails"
+import Search from "./search/search"
+import CriticalQuantityParts from "./spareitem/spareitemcriticalquantity"
 
 
 const ApplicationViews = () => {
@@ -22,6 +24,12 @@ const ApplicationViews = () => {
             <Route
                 exact path="/" render={props => {
                     return <HomePage {...props} />
+                }}
+            />
+
+            <Route
+                exact path="/search" render={props => {
+                    return <Search {...props} />
                 }}
             />
 
@@ -73,6 +81,11 @@ const ApplicationViews = () => {
 
             <Route exact path="/inventorymanagement" render={props => {
                 return <InventoryManagement {...props} />
+            }}
+            />
+
+            <Route exact path="/criticalquantity" render={props => {
+                return <CriticalQuantityParts {...props} />
             }}
             />
 

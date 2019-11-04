@@ -119,6 +119,7 @@ const SpareItemForm = props => {
               autoFocus
             />
           </fieldset>
+          <br></br>
           <fieldset>
             <label htmlFor="description"> Description </label>
             <br />
@@ -139,8 +140,9 @@ const SpareItemForm = props => {
               required
             />
           </fieldset>
+          <br></br>
           <fieldset>
-            <label htmlFor="critical_quantity">Critical Quantity </label>
+            <label htmlFor="critical_quantity">Critical Quantity: Alerts at this number </label>
             <input
               ref={critical_quantity}
               type="number"
@@ -150,17 +152,19 @@ const SpareItemForm = props => {
               required
             />
           </fieldset>
+          <br></br>
           <fieldset>
             <label htmlFor="category"> Category: </label>
-            <select ref={category_id}>
+            <select className="selectpicker btn-primary" ref={category_id}>
               <option value="">Select Category</option>
               {categoryList.map(category => {
                 return <option key={category.id} value={category.id}>{category.name}</option>;
               })}
             </select>
           </fieldset>
+          <br></br>
           <fieldset>
-            <button type="submit">Submit</button>
+            <button className="btn btn-success" type="submit">Submit</button>
           </fieldset>
         </form>
       </main>

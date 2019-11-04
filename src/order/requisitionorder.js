@@ -81,32 +81,34 @@ const RequisitionOrder = props => {
   return (
     <>
       <main className="order-items">
-        <h2>My Requisition Order</h2>
+        <h2>Spare Item Requisition Order</h2>
         <ul>
           {spareItems.map(item => {
             return (
               <li key={item.id}>
                 {item.name}: quantity in stock: {item.quantity}
                 <button
+                className="btn btn-warning"
                   onClick={() => {
                     deleteItem(item.id);
                   }}
                 >
-                  remove
+                  Remove Item
                 </button>
               </li>
             );
           })}
         </ul>
         <button
-          className="fakeLink addToOrder__link"
+          className="btn btn-success"
           onClick={() => completeOrder()}
         >
           {" "}
           Complete Order{" "}
         </button>
         <br></br>
-        <button onClick={cancelOrder}>Cancel Order</button>
+        <br></br>
+        <button className="btn btn-danger" onClick={cancelOrder}>Cancel Order</button>
       </main>
     </>
   );

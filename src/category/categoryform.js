@@ -48,11 +48,13 @@ const NewCategoryForm = props => {
       <form className="categoryList" onSubmit={
         createNewCategory
       }>
+        <br></br>
         <fieldset>
           <label htmlFor="category_name">Category Name:</label>
           <input type="text" ref={category_name} name="category_name" required></input>
         </fieldset>
-        <button type="submit">Add New Category</button>
+        <br></br>
+        <button className="btn btn-primary" type="submit">Add New Category</button>
       </form>
       <>
       <br>
