@@ -6,7 +6,7 @@ const SpareItem = props => {
     return (
         <>
             <section className="spareitem">
-            <Link className="nav-link" to={`/spareitems/${props.spareitem.id}`}>{props.spareitem.name}</Link>
+            <Link className="nav-link" to={`/spareitems/${props.spareitem.id}`}>{props.spareitem.name} -- QNTY:{props.spareitem.quantity}</Link>
             </section>
         </>
     )

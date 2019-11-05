@@ -50,6 +50,7 @@ const SpareItemDetails = props => {
                             <h3 className="card-title">{spareItemDetail.name}</h3>
                             <h5 className="card-text">Product Description: {spareItemDetail.description}</h5>
                             <li className="card-text">Quantity Available: {spareItemDetail.quantity} </li>
+                            <li className="card-text">Critical Quantity: {spareItemDetail.critical_quantity} </li>
                             {/* <li className="card-text">Category: {spareItemDetail.category} </li> */}
                             </div>
                             <br></br>

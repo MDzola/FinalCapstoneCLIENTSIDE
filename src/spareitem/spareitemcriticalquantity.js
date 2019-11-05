@@ -22,6 +22,7 @@ const CriticalQuantityParts = props => {
   return (
     <>
       <main className="explorer">
+        <h2>List of Spare Items that are in Critical Quantity</h2>
        {
            spareitems.map(spareitem => {
                if(spareitem.quantity <= spareitem.critical_quantity){
