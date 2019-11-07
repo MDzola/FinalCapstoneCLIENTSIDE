@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This requires Django for the API side setup. 
+
 ## Available Scripts
 
 In the project directory, you can run:
